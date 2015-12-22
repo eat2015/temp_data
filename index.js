@@ -113,7 +113,7 @@ $(document).ready(function(){
 				        success : function(data) {
 				        	$.each(JSON.parse(data), function(key,value) {
 			  					$("#listlist").append(
-			  						'<div class="title" style="padding:0;height:42px">'+
+			  						'<div class="title" style="padding:0;width:100%;display:inline-block;word-break: break-all;">'+
 									  	'<div style="width:10%;text-align:center;line-height:42px;float:left">'+
 									    	(key+1)+
 									    '</div>'+
@@ -519,7 +519,7 @@ $(document).ready(function(){
 				        success : function(data) {
 				        	$.each(JSON.parse(data), function(key,value) {
 			  					$("#storelist").append(
-			  						'<div class="title" style="padding:0;height:42px">'+
+			  						'<div class="title" style="padding:0;width:100%;display:inline-block">'+
 									  	'<div style="width:10%;text-align:center;line-height:42px;float:left">'+
 									    	(key+1)+
 									    '</div>'+
@@ -551,7 +551,7 @@ $(document).ready(function(){
 				        success : function(data) {
 				        	$.each(JSON.parse(data), function(key,value) {
 			  					$("#listlist").append(
-			  						'<div class="title" style="padding:0;width:100%;display:inline-block">'+
+			  						'<div class="title" style="padding:0;width:100%;display:inline-block;word-break: break-all;">'+
 									  	'<div style="width:10%;text-align:center;line-height:42px;float:left">'+
 									    	(key+1)+
 									    '</div>'+
