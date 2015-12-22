@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template.loader import render_to_string
 from mysite.models import *
 from django.template.context_processors import csrf
-import html.parser
+import html
 import json
 
 def createlist(request):
@@ -153,14 +153,14 @@ def tag_search_store(request):
 
 
 def get_list_info(food_list):
-    html_parser = html.parser.HTMLParser()
     food_list_info = dict()
     food_list_info['id'] = food_list.id
     food_list_info['user'] = food_list.user.username
-    food_list_info['name'] = html_parser.unescape(food_list.name)
+    food_list_info['name'] = html.escape(food_list.name)
     food_list_info['description'] = food_list.description
     food_list_info['good'] = food_list.like
     food_list_info['bad'] = food_list.dislike
+    print(food_list_info['name'])
     return food_list_info        
 
 
