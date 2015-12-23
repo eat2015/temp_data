@@ -157,10 +157,9 @@ def get_list_info(food_list):
     food_list_info['id'] = food_list.id
     food_list_info['user'] = food_list.user.username
     food_list_info['name'] = html.escape(food_list.name)
-    food_list_info['description'] = food_list.description
+    food_list_info['description'] = html.escape(food_list.description)
     food_list_info['good'] = food_list.like
     food_list_info['bad'] = food_list.dislike
-    print(food_list_info['name'])
     return food_list_info        
 
 
